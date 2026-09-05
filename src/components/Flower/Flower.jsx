@@ -1,10 +1,6 @@
-function Flower() {
-  // 1. הגדרת שלושת המשתנים ואתחולם בערכים לבחירתנו
-  const flowerName = 'כלנית';
-  const petalsColor = '#ff4d4d'; // אדום לעלי הכותרת
-  const centerColor = '#1a1a1a'; // שחור למרכז
 
-  // 2. הגדרת אובייקט עיצוב באמצעות המשתנים
+   function Flower({ flowerName, petalsColor, centerColor }) {
+
   const flowerCardStyle = {
     backgroundColor: petalsColor, // צבע הרקע לפי צבע עלי הכותרת
     color: centerColor,           // צבע הכתב לפי צבע המרכז
@@ -20,7 +16,6 @@ function Flower() {
 const handleFlowerClick = () => {
     alert(`אני פרח מסוג: ${flowerName}`);
   }
-  // 3. החזרת ה-JSX ותצוגת הנתונים
   return (
     <div style={flowerCardStyle} onClick={handleFlowerClick}>
       <h2>{flowerName}</h2>
