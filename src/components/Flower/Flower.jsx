@@ -1,9 +1,12 @@
 
    function Flower({ flowerName, petalsColor, centerColor }) {
 
+ const actualPetalsColor = petalsColor ? petalsColor : '#ffb6c1'; // ורוד בהיר כברירת מחדל
+  const actualCenterColor = centerColor ? centerColor : '#4a2c11'; // חום כברירת מחדל
+
   const flowerCardStyle = {
-    backgroundColor: petalsColor, // צבע הרקע לפי צבע עלי הכותרת
-    color: centerColor,           // צבע הכתב לפי צבע המרכז
+    backgroundColor: actualPetalsColor, // שימוש בצבע עם ברירת המחדל
+    color: actualCenterColor,           // צבע הכתב לפי צבע המרכז
     padding: '20px',
     margin: '20px auto',
     borderRadius: '15px',

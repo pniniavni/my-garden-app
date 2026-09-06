@@ -12,6 +12,17 @@ function App() {
         petalsColor="#ff4d4d" 
         centerColor="#1a1a1a" 
       />
+      <Flower 
+        flowerName="חרצית" 
+        petalsColor="#ffeb3b" 
+      />
+      <Flower 
+        flowerName="אירוס" 
+        centerColor="#2e0854" 
+      />
+      <Flower 
+        flowerName="סביון" 
+      />
     </div>
   );
 }
