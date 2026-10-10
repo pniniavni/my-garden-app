@@ -1,9 +1,8 @@
 function Header() {
   return (
-    <header className="main-header">
+    <header>
       <h1>הגינה שלי</h1>
     </header>
   );
 }
-
 export default Header;

@@ -1,12 +1,10 @@
+function Flower({ flowerCode, flowerName, petalsColor, centerColor }) {
+  const petalColor = petalsColor || '#ffb6c1';
+  const flowerCenterColor = centerColor || '#4a2c11';
 
-   function Flower({ flowerName, petalsColor, centerColor }) {
-
- const actualPetalsColor = petalsColor ? petalsColor : '#ffb6c1'; // ורוד בהיר כברירת מחדל
-  const actualCenterColor = centerColor ? centerColor : '#4a2c11'; // חום כברירת מחדל
-
-  const flowerCardStyle = {
-    backgroundColor: actualPetalsColor, // שימוש בצבע עם ברירת המחדל
-    color: actualCenterColor,           // צבע הכתב לפי צבע המרכז
+  const cardStyle = {
+    backgroundColor: petalColor,
+    color: flowerCenterColor,
     padding: '20px',
     margin: '20px auto',
     borderRadius: '15px',
@@ -16,14 +14,17 @@
     fontWeight: 'bold',
     cursor: 'pointer'
   };
-const handleFlowerClick = () => {
+
+  const handleClick = () => {
     alert(`אני פרח מסוג: ${flowerName}`);
-  }
+  };
+
   return (
-    <div style={flowerCardStyle} onClick={handleFlowerClick}>
+    <div style={cardStyle} onClick={handleClick}>
       <h2>{flowerName}</h2>
-      <p>צבע עלי כותרת: {petalsColor}</p>
-      <p>צבע מרכז: {centerColor}</p>
+      <p>קוד פרח: {flowerCode}</p>
+      <p>צבע עלי כותרת: {petalColor}</p>
+      <p>צבע מרכז: {flowerCenterColor}</p>
     </div>
   );
 }
